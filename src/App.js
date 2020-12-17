@@ -3,6 +3,13 @@ import "./App.css";
 import React from "react";
 import Person from "./Person/Person.js";
 function App() {
+	const state = {
+		persons: [
+			{ name: "Alka", age: 23 },
+			{ name: "Taslim", age: 22 },
+			{ name: "Wibi", age: 22 },
+		],
+	};
 	return (
 		// React.createElement(
 		// 	"div",
@@ -11,9 +18,10 @@ function App() {
 		<div>
 			<div className="App">
 				<h1>This is React</h1>
-				<Person name="Alka" age="23" />
-				<Person name="Taslim" age="22" />
-				<Person name="Wibi" age="22">
+				<button>Switch Name</button>
+				<Person name={state.persons[0].name} age={state.persons[0].age} />
+				<Person name={state.persons[1].name} age={state.persons[1].age} />
+				<Person name={state.persons[2].name} age={state.persons[2].age}>
 					<h1>My hobby is racing</h1>
 					<h1>hello</h1>
 				</Person>
