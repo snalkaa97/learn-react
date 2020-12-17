@@ -10,6 +10,10 @@ function App() {
 			{ name: "Wibi", age: 22 },
 		],
 	};
+
+	const switchNameHandler = () => {
+		console.log("clicked");
+	};
 	return (
 		// React.createElement(
 		// 	"div",
@@ -18,7 +22,7 @@ function App() {
 		<div>
 			<div className="App">
 				<h1>This is React</h1>
-				<button>Switch Name</button>
+				<button onClick={switchNameHandler}>Switch Name</button>
 				<Person name={state.persons[0].name} age={state.persons[0].age} />
 				<Person name={state.persons[1].name} age={state.persons[1].age} />
 				<Person name={state.persons[2].name} age={state.persons[2].age}>
