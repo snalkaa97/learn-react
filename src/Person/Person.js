@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./person.css";
 const person = (obj) => {
 	return (
-		<div>
+		<div className="Person">
 			<p onClick={obj.click}>
 				I'm a {obj.name} and I'm {obj.age} years old
 			</p>
