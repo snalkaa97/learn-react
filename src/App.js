@@ -23,7 +23,8 @@ class App extends Component {
 	};
 
 	deletPersonsHandler = (personIndex) => {
-		const persons = this.state.persons;
+		// const persons = this.state.persons;
+		const persons = [...this.state.persons]; //updating the array (spread)
 		persons.splice(personIndex, 1);
 		this.setState({ persons: persons });
 	};
